@@ -45,12 +45,6 @@ service gatekeeper-1-0 /system/bin/android.hardware.gatekeeper@1.0-service
     disabled
     seclabel u:r:recovery:s0
 
-service vendor.vibrator-1-0 /system/bin/android.hardware.vibrator@1.0-service
-    class hal
-    user root
-    group root input
-    seclabel u:r:recovery:s0
-
 service init-device-sh /system/bin/init.device.sh
     user root
     group root
@@ -58,7 +52,6 @@ service init-device-sh /system/bin/init.device.sh
     seclabel u:r:recovery:s0
 
 on boot
-    start vendor.vibrator-1-0
     start init-device-sh
 
 on property:hwservicemanager.ready=true
