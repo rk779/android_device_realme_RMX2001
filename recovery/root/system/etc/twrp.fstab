@@ -1,9 +1,4 @@
-system           /system           ext4
-vendor           /vendor           ext4                                      wait,logical
-oppo_product     /oppo_product     ext4
-oppo_engineering /oppo_engineering ext4
-preload_common   /common_preload   ext4
-
+# mount point    fstype    device                       device2               flags
 /data            ext4 /dev/block/platform/bootdevice/by-name/userdata
 /cache           ext4 /dev/block/platform/bootdevice/by-name/cache
 /boot            emmc /dev/block/platform/bootdevice/by-name/boot
